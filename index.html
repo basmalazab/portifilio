@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basmala Azab Mohamed|AI Portfolio</title>
+    <link rel="icon" type="image/png" href="profile.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aiPrimary: '#8B5CF6',  // Purple-500
+                        aiSecondary: '#10B981', // Keep green for accents
+                        aiDark: '#0F0F0F',     // Pure dark
+                        aiLight: '#1A1A1A',     // Slightly lighter dark
+                        aiText: '#FFFFFF',      // Pure white text
+                        aiTextSecondary: '#E2E8F0', // Lighter secondary text
+                        aiCard: '#1E293B',      // Darker card background
+                        aiBorder: '#334155',    // Border color
+                        aiCardLight: '#334155',  // Lighter card variant
+                    },
+                    fontFamily: {
+                        'ai-sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+        }
+        
+        .ai-gradient-bg {
+            background: linear-gradient(135deg, #6D28D9 0%, #10B981 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-active {
+            background-color: #4F46E5;
+            color: white;
+        }
+        
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        }
+    </style>
+</head>
+<body class="font-ai-sans">
+    <!-- Navigation -->
+    <nav class="bg-aiDark shadow-md sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-aiPrimary">
+                    <span class="text-aiSecondary">Basmala Azab Mohamed </span>| AI Portfolio
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-aiText hover:text-aiPrimary">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-aiPrimary">Experience</a>
+                    <a href="#education" class="text-gray-700 hover:text-aiPrimary">Education</a>
+                    <a href="#projects" class="text-gray-700 hover:text-aiPrimary">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-aiPrimary">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-aiPrimary">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-aiPrimary">About</a>
+                <a href="#experience" class="block py-2 text-gray-700 hover:text-aiPrimary">Experience</a>
+                <a href="#education" class="block py-2 text-gray-700 hover:text-aiPrimary">Education</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-aiPrimary">Projects</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-aiPrimary">Skills</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-aiPrimary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-aiPrimary shadow-lg">
+                            <img src="D:\CV\portifilio\me.jpg" alt="Profile Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-3 -right-3 bg-aiSecondary text-white px-4 py-2 rounded-full font-medium">
+                            AI Engineer
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-aiText mb-4">
+                        Hi, I'm <span class="text-aiPrimary">Basmala Azab</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-aiTextSecondary mb-6">
+                        Artificial Intelligence Specialist
+                    </h2>
+                    <p class="text-[#9795B3] aiTextSecondary mb-6 text-lg leading-relaxed">
+                       AI engineer exploring the world of machine learning, deep learning, and transformer models. 
+                       Gaining hands-on experience through projects and coursework, with a focus on building a strong foundation in model development and deployment. Passionate about learning, experimenting with AI tools, 
+                       and growing into a professional who can apply intelligent systems to solve real-world problems.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-aiPrimary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="border-2 border-aiPrimary text-aiPrimary px-6 py-3 rounded-lg hover:bg-aiPrimary hover:text-white transition duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-aiDark border-t border-aiBorder">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+                <span class="border-b-4 border-aiPrimary pb-2">Professional Experience</span>
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- Experience 1 -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-aiText">HCIA-AI v3.5 – Huawei & NTI </h3>
+                        <!-- <p class="text-aiTextSecondary">TechAI Solutions</p> -->
+                        <p class="text-aiTextSecondary text-sm">16 September 2024 to 2 October 2024 </p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <ul class="list-disc pl-5 space-y-2 text-[#9795B3]">
+                            <li>Gained foundational knowledge in Artificial Intelligence, including Machine Learning and Deep Learning principles.</li>
+                            <li>Built a sentiment analysis model using ML techniques, improving understanding of data preprocessing, model training, and evaluation.</li>
+                            <li>Enhanced skills in working with different ML models and applying them to real-world datasets.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-aiText">Application of Artificial Intelligence – Impact & BUE University </h3>
+                        <!-- <p class="text-aiTextSecondary">DataMind Inc.</p> -->
+                        <p class="text-aiTextSecondary text-sm"> 7 February 2025 to 9 February 2025 </p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <ul class="list-disc pl-5 space-y-2 text-[#9795B3]">
+                            <li>Explored real-world AI applications and emerging AI trends across industries.</li>
+                            <li>Gained experience in data cleaning and preprocessing, including handling missing values, normalization, and feature engineering.</li>
+                            <li>Worked with different datasets to apply AI techniques effectively across multiple domains.</li>
+                            <li>Strengthened understanding of the AI workflow, from preparing raw data to building and evaluating models.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-aiText">AI For Business – ITIDA & NTI </h3>
+                        <!-- <p class="text-aiTextSecondary">Deep Learning Labs</p> -->
+                        <p class="text-aiTextSecondary text-sm">May 2017 - May 2018</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <ul class="list-disc pl-5 space-y-2 text-[#9795B3]">
+                            <li>Gained hands-on experience in machine learning (ML), deep learning (DL), and transformer models.</li>
+                            <li>Learned how to deploy AI models and integrate them into practical business applications.</li>
+                            <li>Developed soft skills such as teamwork, communication, and problem-solving through collaborative projects.</li>
+                            <li>Acquired freelancing skills, preparing to apply AI expertise in real-world and market-driven scenarios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6 bg-aiLight border-t border-aiBorder">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+                <span class="border-b-4 border-aiPrimary pb-2">Education</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Education 1 -->
+                <div class="bg-aiCard p-8 rounded-xl shadow-lg border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold text-gray-600">Bachelor of Computer and Artificial Intelligence  </h3> -->
+                            <p class="text-gray-600">Al_Ryada University for Science and Technology – Sadat City</p>
+                            <p class="text-gray-500 text-sm">2023 – 2027</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                       Bachelor of Computer and Artificial Intelligence 
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                         GPA: 3.73 
+                    </p>
+                </div>
+                
+                <!-- Education 2 -->
+                <div class="bg-aiCard p-8 rounded-xl shadow-lg border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold text-gray-800">MSc in Computer Science</h3> -->
+                            <p class="text-gray-600">Deep Learning Fundamentals – NVIDIA </p>
+                            <p class="text-gray-500 text-sm"> 20 August 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        Specialization: Deep Learning and Data Science
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Thesis: "Understood core Deep Learning concepts and architectures (CNNs, RNNs, Transformers)."
+                    </p>
+                </div>
+                
+                <!-- Education 3 -->
+                <div class="bg-aiCard p-8 rounded-xl shadow-lg border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold text-gray-800">MSc in Computer Science</h3> -->
+                            <p class="text-gray-600">AI for Business – NTI and ITIDA </p>
+                            <p class="text-gray-500 text-sm"> 3 August 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        Specialization: Machine Learning ,  Deep Learning , Data Science and Transformers
+                    </p>
+                    <!-- <p class="text-gray-600 mt-2">
+                        Thesis: "Understood core Deep Learning concepts and architectures (CNNs, RNNs, Transformers)."
+                    </p> -->
+                </div>
+                
+                <!-- Education 4 -->
+               <div class="bg-aiCard p-8 rounded-xl shadow-lg border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold text-gray-800">MSc in Computer Science</h3> -->
+                            <p class="text-gray-600">AI and Machine Learning  Specialization – Microsoft and SPRINTS</p>
+                            <p class="text-gray-500 text-sm"> 15 September 2025</p>
+                        </div>
+                    </div>
+                    <!-- <p class="text-gray-600">
+                        Specialization: Deep Learning and Data Science
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Thesis: "Understood core Deep Learning concepts and architectures (CNNs, RNNs, Transformers)."
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-aiDark border-t border-aiBorder">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+                <span class="border-b-4 border-aiPrimary pb-2">Projects</span>
+            </h2>
+            
+            <p class="text-center  text-[#9795B3] mb-12 max-w-2xl mx-auto">
+                Explore my AI projects across different domains. Click on the filters to view specific categories.
+            </p>
+            
+            <!-- Project Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-4 py-2 rounded-full border border-aiPrimary text-aiPrimary hover:bg-aiPrimary hover:text-white transition duration-300 filter-active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-aiPrimary text-aiPrimary hover:bg-aiPrimary hover:text-white transition duration-300" data-filter="machine-learning">
+                    Machine Learning
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-aiPrimary text-aiPrimary hover:bg-aiPrimary hover:text-white transition duration-300" data-filter="deep-learning">
+                    Deep Learning
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-aiPrimary text-aiPrimary hover:bg-aiPrimary hover:text-white transition duration-300" data-filter="others">
+                    Others
+                </button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-aiCard rounded-xl shadow-md overflow-hidden border border-aiBorder machine-learning" data-category="machine-learning">
+                    <img src="D:\CV\portifilio\liver cancer.png" alt="liver cancer " class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-aiText mb-2">Predictive has liver cancer or not </h3>
+                        <p class="text-aiTextSecondary mb-4">ML model predicting has cancer or not .</p>
+                       <a href="https://colab.research.google.com/drive/1neIXfHznRTk-molUYcRY8nJolFL9oNPS?usp=sharing" target="_blank" class="text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                           </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-aiCard rounded-xl shadow-md overflow-hidden border border-aiBorder machine-learning" data-category="machine-learning">
+                    <img src="D:\CV\portifilio\heartdisease.png" alt="heart disease " class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-aiText mb-2">Predictive has heart disease</h3>
+                        <p class="text-aiTextSecondary mb-4">machine learning model for predict has heart disease or not .</p>
+                        <a href="https://huggingface.co/spaces/Basmala11/my-heartdisease-app" target="_blank" class="text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                           </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-aiCard rounded-xl shadow-md overflow-hidden border border-aiBorder others" data-category="others">
+                    <img src="D:\CV\portifilio\report.png" alt=" generate reports" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-aiText mb-2">Generate reoprts using transformers</h3>
+                        <p class="text-aiTextSecondary mb-4">Generate report using GEMENI model.</p>
+                        <a href="https://huggingface.co/spaces/Basmala11/my-report" target="_blank" class="text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                           </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-aiCard rounded-xl shadow-md overflow-hidden border border-aiBorder deep-learning" data-category="deep-learning">
+                    <img src="D:\CV\portifilio\heart2.png" alt="Heart disease" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-aiText mb-2">Predictive has heart disease or not (different dataset using deep learning)</h3>
+                        <p class="text-aiTextSecondary mb-4">deep learning model for predict has heart disease or not .</p>
+                       <a href="https://huggingface.co/spaces/Basmala11/my-heart-dl" target="_blank" class="text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                           </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-aiCard rounded-xl shadow-md overflow-hidden border border-aiBorder others" data-category="others">
+                    <img src="D:\CV\portifilio\chatbot.png" alt="AI Chatbot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-aiText mb-2">AI Chatbot</h3>
+                        <p class="text-aiTextSecondary mb-4">Conversational agent for customer support automation.</p>
+                        <a href="project1.html" target="_blank" class="text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                           </a>
+                    </div>
+                </div>
+                
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+   <!-- Skills Section -->
+<section id="skills" class="py-20 px-6 bg-aiLight border-t border-aiBorder">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+      <span class="border-b-4 border-aiPrimary pb-2">Skills</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Programming Languages -->
+      <div class="bg-aiCardLight p-8 rounded-xl shadow-lg border border-aiBorder">
+        <h3 class="text-xl font-semibold text-aiText mb-4">Programming Languages</h3>
+        <p class="text-aiText">
+          Python, C++, Java, JavaScript, TypeScript, HTML, CSS
+        </p>
+      </div>
+
+      <!-- AI & Data Science Tools -->
+      <div class="bg-aiCardLight p-8 rounded-xl shadow-lg border border-aiBorder">
+        <h3 class="text-xl font-semibold text-aiText mb-4">AI & Data Science Tools</h3>
+        <p class="text-aiText">
+          TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Power BI, Streamlit
+        </p>
+      </div>
+
+      <!-- Technologies & Frameworks -->
+      <div class="bg-aiCardLight p-8 rounded-xl shadow-lg border border-aiBorder">
+        <h3 class="text-xl font-semibold text-aiText mb-4">Technologies & Frameworks</h3>
+        <p class="text-aiText">
+          React Native, Windows Forms, SQL/Databases, Data Visualization
+        </p>
+      </div>
+
+      <!-- Core Concepts -->
+      <div class="bg-aiCardLight p-8 rounded-xl shadow-lg border border-aiBorder">
+        <h3 class="text-xl font-semibold text-aiText mb-4">Core Concepts</h3>
+        <p class="text-aiText">
+          Machine Learning, Deep Learning, Transformers, Natural Language Processing (NLP), 
+          Computer Vision, Algorithms, Data Structures, Data Analysis
+        </p>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="bg-aiCardLight p-8 rounded-xl shadow-lg border border-aiBorder md:col-span-2">
+        <h3 class="text-xl font-semibold text-aiText mb-4">Soft Skills</h3>
+        <p class="text-aiText">
+          Strong Presentation & Communication, Problem Solving, Teamwork, Adaptability, 
+          Fast Learner, Analytical Thinking
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Languages Section -->
+    <section id="languages" class="py-20 px-6 bg-aiDark border-t border-aiBorder">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+                <span class="border-b-4 border-aiPrimary pb-2">Languages</span>
+            </h2>
+            
+            <div class="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Language 1 -->
+                <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-aiPrimary text-white flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold">EN</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">English</h3>
+                            <p class="text-gray-600">Fluent (B2)</p>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-aiPrimary h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <!-- Language 2 -->
+                <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-aiPrimary text-white flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold">AR</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Arabic</h3>
+                            <p class="text-gray-600">Native</p>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-aiPrimary h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+           
+            </div>
+        </div>
+    </section>
+
+   <!-- Divider -->
+<div class="section-divider"></div>
+
+<section id="certificates" class="py-20 px-6 bg-aiLight border-t border-aiBorder">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+      <span class="border-b-4 border-aiPrimary pb-2">Certificates</span>
+    </h2>
+
+    <!-- Vertical list of certificates -->
+    <div class="flex flex-col gap-8">
+      
+      <!-- Certificate 1 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">HCIA-AI v3.5, Huawei & NTI</h3>
+            <p class="text-gray-500">DeepLearning.AI.MachineLearning</p>
+            <p class="text-gray-500 text-sm">2 October 2024</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/17b4oEz2D_cP5OxRwIgCfqzk8F7_Ogzk4/view?usp=sharing" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">Application of Artificial Intelligence</h3>
+            <p class="text-gray-500">Impact & BUE University</p>
+            <p class="text-gray-500 text-sm">9 February 2025</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1aqTAuYydoMeFUUYwvbUInkq7penck3DS/view?usp=sharing" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">Deep Learning Fundamentals</h3>
+            <p class="text-gray-500">NVIDIA</p>
+            <p class="text-gray-500 text-sm">20 August 2025</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1Doql3vWFrNC7iYsVY0Lz-gJrsWFtANwt/view?usp=sharing" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">AI for Business</h3>
+            <p class="text-gray-500">NTI & ITIDA</p>
+            <p class="text-gray-500 text-sm">28 August 2025</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1f3zjCuB_lqtvJzbrMuwHPfztunu2cQx4/view?usp=sharing" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">Building LLM Apps with Prompt Engineering</h3>
+            <p class="text-gray-500">NVIDIA</p>
+            <p class="text-gray-500 text-sm">18 September 2025</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1fPzA-87asHxffr4GyFTW-5v1LljExa75/view?usp=sharing" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Certificate 6 -->
+      <div class="bg-aiCard p-6 rounded-xl shadow-md border border-aiBorder">
+        <div class="flex items-center mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-100">AI & Machine Learning</h3>
+            <p class="text-gray-500">Microsoft & SPRINTS</p>
+            <p class="text-gray-500 text-sm">15 September 2025</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1FaTARj25KoV3hbFb1lgIuWp1ADBeJ2dJ/view?usp=drive_link" class="inline-block text-aiPrimary font-medium hover:text-aiSecondary transition duration-300">
+          View Certificate <i class="fas fa-external-link-alt ml-1"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-aiDark border-t border-aiBorder">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-aiText mb-16">
+                <span class="border-b-4 border-aiPrimary pb-2">Get In Touch</span>
+            </h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-aiCard border border-aiBorder rounded-lg focus:outline-none focus:ring-2 focus:ring-aiPrimary focus:border-transparent text-aiText placeholder-aiTextSecondary" placeholder="name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-aiCard border border-aiBorder rounded-lg focus:outline-none focus:ring-2 focus:ring-aiPrimary focus:border-transparent text-aiText placeholder-aiTextSecondary" placeholder="email">
+                        </div>
+                      
+                        <div>
+                            <label for="message" class="block text-white font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-aiCard border border-aiBorder rounded-lg focus:outline-none focus:ring-2 focus:ring-aiPrimary focus:border-transparent text-aiText placeholder-aiTextSecondary" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-aiPrimary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="bg-aiLight p-8 rounded-xl h-full border border-gray-700">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Email</h4>
+                                    <a href="mailto:basmala.azab.mohamed@gmail.com" class="text-gray-600 hover:text-aiPrimary transition duration-300">basmala.azab.mohamed@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="flex items-start">
+                                <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Phone</h4>
+                                    <a href="tel:+201020053849" class="text-gray-600 hover:text-aiPrimary transition duration-300">+20 1020053849</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Location -->
+                            <div class="flex items-start">
+                                <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Location</h4>
+                                    <p class="text-gray-600">Menofia , Eygpt </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Links -->
+                            <div class="flex items-start">
+                                <div class="bg-aiPrimary text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-share-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-3">Social Profiles</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="https://www.linkedin.com/in/basmala-azab-931a56314/" class="bg-aiDark text-aiText p-3 rounded-full hover:bg-aiPrimary hover:text-white transition duration-300">
+                                            <i class="fab fa-linkedin-in text-xl"></i>
+                                        </a>
+                                        <a href="https://github.com/basmalazab" class="bg-aiDark text-aiText p-3 rounded-full hover:bg-aiPrimary hover:text-white transition duration-300">
+                                            <i class="fab fa-github text-xl"></i>
+                                        </a>
+                                        <a href="https://www.kaggle.com/basmallaazab" class="bg-aiDark text-aiText p-3 rounded-full hover:bg-aiPrimary hover:text-white transition duration-300">
+                                            <i class="fab fa-kaggle text-xl"></i>
+                                        </a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-aiText py-12 px-6 border-t border-gray-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">
+                        <span class="text-aiSecondary">Basmala Azab Mohamed </span>| AI Portfolio
+                    </div>
+                    <p class="text-gray-400">Artificial Intelligence Specialist</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#https://www.linkedin.com/in/basmala-azab-931a56314/" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/basmalazab" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.kaggle.com/basmallaazab" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-kaggle text-xl"></i>
+                    </a>
+                  
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; Basmala Azab Mohamed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active filter button
+                filterBtns.forEach(b => b.classList.remove('filter-active'));
+                btn.classList.add('filter-active');
+                
+                const filter = btn.dataset.filter;
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // View project details button
+        const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const projectTitle = btn.parentElement.querySelector('h3').textContent;
+                alert(`Viewing details for: ${projectTitle}\n\nThis would typically open a modal or separate page with full project details.`);
+            });
+        });
+    </script>
+</body>
+</html>
